@@ -1,5 +1,13 @@
 import type { Constructor, TypedArray } from "typestar"
 
+/**
+ *  Removes duplicates from a TypedArray and returns a new TypedArray of the same type.
+ *  Preserves the order of elements, keeping the first occurrence of each value.
+ *
+ *  @template T - The type of the TypedArray.
+ *  @param arr - The input TypedArray to process.
+ *  s@returns A new TypedArray of the same type containing unique elements.
+ */
 export default function uniqueTA<T extends TypedArray>(arr: T): T {
   const length = arr.length
   const newArr: T = new (arr.constructor as Constructor<T>)(length)
