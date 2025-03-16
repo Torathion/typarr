@@ -1,5 +1,5 @@
-import { F64, UI8 } from 'src/constants'
 import type { TypedArray } from 'typestar'
+import { F64, UI8 } from 'src/constants'
 
 /**
  * Resizes an ArrayBuffer or TypedArray to a specified length, creating a new ArrayBuffer.

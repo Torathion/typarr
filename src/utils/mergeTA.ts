@@ -1,4 +1,4 @@
-import type { TypedArray, Constructor } from 'typestar'
+import type { Constructor, TypedArray } from 'typestar'
 import copyTA from './copyTA'
 
 /**
@@ -9,7 +9,7 @@ import copyTA from './copyTA'
  *  @param b - The second TypedArray to append
  *  @returns A new TypedArray containing all elements from both input arrays
  */
-export default function mergeTypedArrays<T extends TypedArray>(a: T, b: T): T {
+export default function mergeTA<T extends TypedArray>(a: T, b: T): T {
   const aLen = a.length
   if (!aLen) return copyTA(b)
   const c = new (a.constructor as Constructor<T>)(aLen + b.length)

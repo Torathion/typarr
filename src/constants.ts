@@ -10,6 +10,18 @@ export const UI16: TypedArrayConstructor<Uint16Array> = Uint16Array
 export const I16: TypedArrayConstructor<Int16Array> = Int16Array
 export const UI8C: TypedArrayConstructor<Uint8ClampedArray> = Uint8ClampedArray
 
+export const I8_MAX = 127
+export const UI8_MAX = 255
+export const I16_MAX = 32767
+export const UI16_MAX = 65535
+export const I32_MAX = 2147483647
+export const UI32_MAX = 4294967295
+export const F32_MAX = 3.4e38
+export const F64_MAX = 1.79e308
+export const I8_MIN = -128
+export const I16_MIN = -32768
+export const I32_MIN = -2147483648
+
 /**
  *  Half-precision floating-point difference between the smallest representable value above 1 and 1, a.k.a. epsilon, IEEE754
  */
@@ -54,7 +66,7 @@ export const F64_FROOT_EPS = 0.0001220703125
  *  Half-precision floating-point bias, IEEE754
  */
 export const F16_BIAS = 15
-/*
+/**
  *  Single-precision floating-point bias, IEEE754
  */
 export const F32_BIAS = 127
@@ -103,15 +115,6 @@ export const F32_SIZE = 4
  *  Size of a Float64Array number
  */
 export const F64_SIZE = 8
-// BOUNDS
-/**
- *  Biggest possible number of a signed 32 number value-wise. Note: This is NOT 1 << 31.
- */
-export const INT32_MAX = 2147483647
-/**
- *  Smallest possible number of a signed 32 number value-wise. Note: This is 1 << 31.
- */
-export const INT32_MIN = -2147483648
 /**
  * The effective number of significant bits in half-precision floating-point (includes 1 hidden bit, IEEE754 standard).
  */

@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      bitbob:
-        specifier: ^1.0.8
-        version: 1.0.8
+      typestar:
+        specifier: ^1.8.0
+        version: 1.8.0
     devDependencies:
       '@rollup/rollup-win32-ia32-msvc':
         specifier: ^4.35.0
@@ -30,9 +30,6 @@ importers:
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
-      typestar:
-        specifier: ^1.8.0
-        version: 1.8.0
       vitest:
         specifier: ^3.0.8
         version: 3.0.8(stylus@0.57.0)
@@ -764,9 +761,6 @@ packages:
 
   birecord@0.1.1:
     resolution: {integrity: sha512-VUpsf/qykW0heRlC8LooCq28Kxn3mAqKohhDG/49rrsQ1dT1CXyj/pgXS+5BSRzFTR/3DyIBOqQOrGyZOh71Aw==}
-
-  bitbob@1.0.8:
-    resolution: {integrity: sha512-Dh6LJ1DC9MqZsLiYU7I5P240LfMMain+0rXELLnGlxxWmNU0+JJ3Ygo4NSGahQHt9+HonHo6ebWQEmN9+s72MA==}
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -3504,8 +3498,6 @@ snapshots:
   balanced-match@1.0.2: {}
 
   birecord@0.1.1: {}
-
-  bitbob@1.0.8: {}
 
   boolbase@1.0.0: {}
 
