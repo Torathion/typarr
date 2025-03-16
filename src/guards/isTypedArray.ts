@@ -10,4 +10,3 @@ import type { TypedArray } from 'typestar'
 export default function isTypedArray(value: unknown): value is TypedArray {
   return ArrayBuffer.isView(value) && !(value instanceof DataView)
 }
-

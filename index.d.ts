@@ -238,7 +238,7 @@ declare module 'typarr' {
    *  @param offset - The starting position in the target array to begin writing (default: 0)
    *  @returns A TypedArray view of the modified portion, or the source data if it's longer than the target
    */
-  export function overwriteTA<T extends TypedArray>(arr: T, data: T, offset = 0): T
+  export function overwriteTA<T extends TypedArray>(arr: T, data: T, offset?: number): T
   /**
    * Creates a new typed array by appending a value to an existing typed array. Due to typed arrays being
    * of a fixed length, we can't reuse the old typed array.
@@ -258,4 +258,21 @@ declare module 'typarr' {
    * @returns A new ArrayBuffer of the specified length with the contents of the original buffer copied over.
    */
   export function resizeBuffer(buffer: ArrayBuffer | TypedArray, length: number): ArrayBuffer
+  /**
+   *  Removes duplicates from a TypedArray and returns a new TypedArray of the same type.
+   *  Preserves the order of elements, keeping the first occurrence of each value.
+   *
+   *  @template T - The type of the TypedArray.
+   *  @param arr - The input TypedArray to process.
+   *  @returns A new TypedArray of the same type containing unique elements.
+   */
+  export function uniqueTA<T extends TypedArray>(arr: T): T
+  /**
+   *  Checks if a value is a TypedArray (e.g., Float64Array, Uint32Array, etc.).
+   *  Returns false for DataView instances, even though they are views of an ArrayBuffer.
+   *
+   *  @param value - The value to check.
+   *  @returns `true` if the value is a TypedArray, otherwise `false`.
+   */
+  export function isTypedArray(value: unknown): value is TypedArray
 }

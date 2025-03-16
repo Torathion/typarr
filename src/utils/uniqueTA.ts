@@ -1,4 +1,4 @@
-import type { Constructor, TypedArray } from "typestar"
+import type { Constructor, TypedArray } from 'typestar'
 
 /**
  *  Removes duplicates from a TypedArray and returns a new TypedArray of the same type.
@@ -6,7 +6,7 @@ import type { Constructor, TypedArray } from "typestar"
  *
  *  @template T - The type of the TypedArray.
  *  @param arr - The input TypedArray to process.
- *  s@returns A new TypedArray of the same type containing unique elements.
+ *  @returns A new TypedArray of the same type containing unique elements.
  */
 export default function uniqueTA<T extends TypedArray>(arr: T): T {
   const length = arr.length
@@ -27,4 +27,3 @@ export default function uniqueTA<T extends TypedArray>(arr: T): T {
   }
   return newArr.subarray(0, pointer) as T
 }
-
