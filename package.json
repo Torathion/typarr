@@ -46,6 +46,6 @@
     "vitest": "^3.0.8"
   },
   "dependencies": {
-    "typestar": "^1.8.0"
+    "typestar": "^2.1.0"
   }
 }
